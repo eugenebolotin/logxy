@@ -4,7 +4,7 @@ Logger service simple as this.
 It is based on ZeroMQ and waits for **messages in format: [filename]\t[message]**.
 
 You can use it from any language that has ZeroMQ library binding.
-
+<br><br>
 *Yes, @epikhinm, you should pass filename with each message. :)*
 
 *But it is dead simple and cheap for IPC transport.*
