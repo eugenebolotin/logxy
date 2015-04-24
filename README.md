@@ -3,6 +3,8 @@ Logger service simple as this.
 
 It is based on ZeroMQ and waits for **messages in format: [filename]\t[message]**.
 
+**message** is any byte sequence. Only first tab is used as filename delimiter.
+
 You can use it from any language that has ZeroMQ library binding.
 <br><br>
 *Yes, @epikhinm, you should pass filename with each message. :)*
