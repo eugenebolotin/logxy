@@ -29,7 +29,7 @@ void Message(const char* msg)
 
 void PrintUsage()
 {
-    printf("Usage: logxy 0MQ_SOCKET_ADDRESS MAX_QUEUE_SIZE PID_FILE_PATH\n");
+    printf("Usage: logxy <ZEROMQ_SOCKET_ADDRESS> <MAX_QUEUE_SIZE> <PID_FILE_PATH>\n");
 }
 
 void WritePid(const char* filename)
