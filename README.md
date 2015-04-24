@@ -9,7 +9,7 @@ You can use it from any language that has ZeroMQ library binding.
 
 *But it is dead simple and cheap for IPC transport.*
 
-*And I'm open to ideas how to make it more efficiant and simple.*
+*And I'm open for suggestions how to make it more efficient and simple.*
 
 
 Inspiration or why not syslog (rsyslog)?
