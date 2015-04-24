@@ -12,8 +12,6 @@ QUEUE_SIZE = int(sys.argv[2])
 context = zmq.Context()
 client = context.socket(zmq.PUSH)
 client.setsockopt(zmq.SNDHWM, QUEUE_SIZE)
-client.setsockopt(zmq.RCVHWM, QUEUE_SIZE)
-client.setsockopt(zmq.BACKLOG, QUEUE_SIZE)
 client.connect(ZMQ_ADDRESS)
 
 for total in xrange(1000000000):

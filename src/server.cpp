@@ -70,7 +70,6 @@ int main(int argc, char* argv[])
     zmqwrap::Context context(10);
     zmqwrap::Socket socket(context.Get(), ZMQ_PULL);
     zmq_setsockopt(socket.Get(), ZMQ_RCVHWM, &queue_size, sizeof(queue_size));
-    zmq_setsockopt(socket.Get(), ZMQ_SNDHWM, &queue_size, sizeof(queue_size));
     zmq_setsockopt(socket.Get(), ZMQ_BACKLOG, &queue_size, sizeof(queue_size));
     zmq_bind(socket.Get(), socket_zmq);
 
