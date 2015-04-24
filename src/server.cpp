@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
     signal(SIGTERM, StopHandler);
     signal(SIGHUP, SIG_IGN);
 
-    zmqwrap::Context context(10);
+    zmqwrap::Context context(1);
     zmqwrap::Socket socket(context.Get(), ZMQ_PULL);
     zmq_setsockopt(socket.Get(), ZMQ_RCVHWM, &queue_size, sizeof(queue_size));
     zmq_setsockopt(socket.Get(), ZMQ_BACKLOG, &queue_size, sizeof(queue_size));
