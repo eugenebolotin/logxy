@@ -71,7 +71,8 @@ I've tested in on single RHEL-server with unix-socket as a transport.
 
 So, in that case LogXY is bounded by message rate (~300K per second) and Disk IO (100 Mb/s in my case).
 
-# Dependencies
+Dependencies
+--
 Beautiful ZeroMQ library: **libzmq** >= 3.2 (https://github.com/zeromq/libzmq)
 
 Python bindings to ZeroMQ for running example: **pyzmq** (https://github.com/zeromq/pyzmq)
