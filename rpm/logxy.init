@@ -1,0 +1,74 @@
+#!/bin/bash
+#
+# logxy        Startup script for logxy daemon.
+# description: LogXY daemon is a simple logger service that receives logs by ZeroMQ and writes to logs.
+
+# Source function library.
+. /etc/init.d/functions
+
+EXEC="/opt/logxy/logxy"
+ZEROMQ_SOCKET="ipc:///tmp/logxy.sock"
+QUEUE_SIZE="1000000"
+PIDFILE=/var/run/logxy.pid
+LOGFILE=/var/log/logxy.log
+LOCKFILE=/var/lock/subsys/logxy
+
+start() {
+    [ -x $EXEC ] || exit 5
+    rhstatus >/dev/null 2>&1 && echo "Already running" && exit 1
+
+    echo -n $"Starting logxy daemon: "
+    $EXEC $ZEROMQ_SOCKET $QUEUE_SIZE $PIDFILE >$LOGFILE 2>&1 &
+    RETVAL=$?
+    [ $RETVAL -eq 0 ] && touch $LOCKFILE && echo "OK"
+    [ $RETVAL -ne 0 ] && echo "FAILED"
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Shutting down logxy daemon: "
+    killproc -p "$PIDFILE" -d 30 $EXEC
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $LOCKFILE
+    return $RETVAL
+}
+
+rhstatus() {
+    status -p "$PIDFILE" -l $EXEC
+}
+
+restart() {
+    stop
+    start
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        restart
+        ;;
+    reload)
+        exit 3
+        ;;
+    force-reload)
+        restart
+        ;;
+    status)
+        rhstatus
+        ;;
+    condrestart|try-restart)
+        rhstatus >/dev/null 2>&1 || exit 0
+        restart
+        ;;
+    *)
+        echo $"Usage: $0 {start|stop|restart|condrestart|try-restart|reload|force-reload|status}"
+        exit 3
+esac
+
+exit $?
