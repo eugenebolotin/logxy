@@ -83,11 +83,18 @@ Now that code is going to production.
 
 We made a bet with @brk0v that after a month of usage code will **grow more than 100 lines**. 
 
-Now there is **229 lines of code**.
+Now there are **229 lines of code**.
 
 If it will be so I will buy @brk0v a cup of hot black tea in Starbucks.
 
 It not - he will buy me a cup of hot chocolate. ;)
+
+News
+--
+So logxy is in production.
+
+And grown a bit... **234 lines of code** (+5 loc).
+
 
 PS
 --
