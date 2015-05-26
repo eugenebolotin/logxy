@@ -20,9 +20,9 @@ I already asked that question to myself when I needed some logging in simple mul
 
 I face several problems:
 
-1. I need multiline logging - to enable this I should change global option. I dont want to change global options, because I don't want to break real system logs.
+1. I need multiline logging - to enable this I should change global option. I dont want to change global options, because I don't want to break system logs.
 2. No time prefix for log line, and no special characters in beginning of message by specifying template like that: $template myFormat,"%msg:2:1048576%\n"
-3. I have a lot of logs on one app, so I wrote about 15 regexps to forward them in different files.
+3. I have a lot of logs in one app, so I wrote about 15 regexps to forward them in different files.
 4. Fighting with limitation for size of single syslog message.
 5. Problem with syslog function deadlock when syslogd cannot handle so much logs.
 
