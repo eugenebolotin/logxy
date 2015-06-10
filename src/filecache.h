@@ -12,7 +12,8 @@ public:
     void Clear()
     {
         for(auto p = m_cache.begin(); p != m_cache.end(); p++)
-            fclose(p->second);
+            if(p->second)
+                fclose(p->second);
         m_cache.clear();
     }
 
