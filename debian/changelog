@@ -1,0 +1,41 @@
+logxy (1.0-5ubuntu7) unstable; urgency=low
+
+  * Removed postinit and prerm scripts.
+
+ -- Yaroslav Klimik <klimiky@yandex-team.ru>  Thu, 02 Jun 2016 17:42:47 +0300
+ 
+logxy (1.0-5ubuntu6) unstable; urgency=low
+
+  * Fixed bug.
+
+ -- Yaroslav Klimik <klimiky@yandex-team.ru>  Thu, 02 Jun 2016 17:33:34 +0300
+ 
+logxy (1.0-5ubuntu5) unstable; urgency=low
+
+  * Fixed bug.
+
+ -- Yaroslav Klimik <klimiky@yandex-team.ru>  Thu, 02 Jun 2016 17:24:21 +0300
+ 
+logxy (1.0-5ubuntu4) unstable; urgency=low
+
+  * Fixed bug.
+
+ -- Yaroslav Klimik <klimiky@yandex-team.ru>  Thu, 02 Jun 2016 17:05:11 +0300
+ 
+logxy (1.0-5ubuntu3) unstable; urgency=low
+
+  * Fixed bug.
+
+ -- Yaroslav Klimik <klimiky@yandex-team.ru>  Thu, 02 Jun 2016 16:59:42 +0300
+ 
+logxy (1.0-5ubuntu2) unstable; urgency=low
+
+  * Fixed bug.
+
+ -- Yaroslav Klimik <klimiky@yandex-team.ru>  Thu, 02 Jun 2016 16:49:25 +0300
+ 
+logxy (1.0-5ubuntu1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Yaroslav Klimik <klimiky@yandex-team.ru>  Wed, 01 Jun 2016 19:42:35 +0300
