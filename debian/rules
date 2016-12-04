@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+%:
+	dh $@
+
+override_dh_install:
+	mkdir -p debian/logxy/usr/sbin/ debian/logxy/usr/share/doc/logxy/examples/
+	rm -f debian/logxy/usr/sbin/* 2>&1 > /dev/null
+	cp logxy debian/logxy/usr/sbin/
+	cp example/* debian/logxy/usr/share/doc/logxy/examples/

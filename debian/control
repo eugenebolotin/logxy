@@ -1,0 +1,18 @@
+Source: logxy
+Section: main
+Priority: optional
+Maintainer: Yaroslav Klimik <klimiky@yandex-team.ru>
+Build-Depends: debhelper (>= 8.0.0), libzmq3-dev (>=3.2.0)
+Standards-Version: 3.9.4
+Homepage: https://github.com/eugenebolotin/logxy
+Vcs-Git: git://github.com/eugenebolotin/logxy.git
+Vcs-Browser: https://github.com/eugenebolotin/logxy
+
+Package: logxy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Simple logger daemon that uses ZeroMQ as a transport
+ LogXY is a simple logger daemon that uses ZeroMQ as a transport.
+ It waits for messages in format: [filename]\t[message].
+ message is any byte sequence. Only first tab is used as filename delimiter.
+ You can use it from any language that has ZeroMQ library binding.
